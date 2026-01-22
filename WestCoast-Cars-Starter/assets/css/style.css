@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,200;1,400;1,500;1,600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #00796b;
+  color: #f4f4f4;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  color: #000;
+}
+
+section p {
+  font-size: 0.9rem;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background: #444;
+  color: #fff;
+  padding: 0.4rem;
+}
+
+.goback {
+  display: inline-block;
+  color: #f4f4f4;
+  margin-bottom: 1.4rem;
+}
+
+/* Start navigation */
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
+  background: #004d40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li.logo {
+  font-size: 1.6rem;
+}
+
+nav ul li.logo span {
+  color: #00796b;
+  /* color: #2196f3; */
+}
+
+nav ul li.toggle {
+  order: 1;
+}
+
+nav ul li.menu-item {
+  display: none;
+  width: 100%;
+  text-align: center;
+  order: 2;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.4rem 0.4rem;
+  color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ef6c00;
+}
+
+nav ul:has(li .menu-btn:checked) .menu-item {
+  display: block;
+}
+
+/* Draw the hamburger menu */
+nav ul li .menu-btn {
+  display: none;
+}
+
+nav ul li .menu-icon {
+  padding: 28px 20px;
+  cursor: pointer;
+}
+
+nav ul li .menu-icon .nav-icon {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon:before,
+nav ul li .menu-icon .nav-icon:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+nav ul .menu-icon .nav-icon:before {
+  top: -5px;
+}
+
+nav ul li .menu-icon .nav-icon:after {
+  top: 5px;
+}
+
+/* Animate the hamburger menu */
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+/* End navigation */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+/* Start index page */
+#main-area {
+  background: url('https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg')
+    no-repeat center center/cover;
+  height: 600px;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+#main-area > section {
+  background: #00796b;
+  color: #fff;
+  padding: 1rem;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+#main-area h1 {
+  font-size: 1.8rem;
+}
+
+#main-area p {
+  padding-bottom: 1.25rem;
+}
+
+#info-area .display-image {
+  display: none;
+}
+
+#info-area .info {
+  min-height: 300px;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+#info-area .info h3 {
+  font-size: 1.5rem;
+}
+
+#info-area .info p {
+  padding-bottom: 1rem;
+}
+
+#info-area .info a {
+  margin-bottom: 1rem;
+}
+/* End index page */
+
+/* Start gallery */
+#vehicles-gallery {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px #ef6c00;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+  margin: 1rem 0;
+}
+
+.card img {
+  position: relative;
+  max-width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card img:hover {
+  cursor: pointer;
+}
+
+.vehicle-image {
+  border: solid 1px #ef6c00;
+  background: #fff;
+  min-width: 300px;
+  border-radius: 0.5rem;
+}
+
+.vehicle-image img {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  width: 100%;
+}
+
+.vehicle-image img:hover {
+  cursor: pointer;
+}
+
+.vehicle-image p {
+  text-align: center;
+  font-style: italic;
+  color: #000;
+  margin-top: -16px;
+}
+/* End gallery */
+
+/* Start vehicle details */
+#details-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+#details-area .card {
+  width: 70%;
+}
+
+#details-area .card p {
+  color: #000;
+  font-weight: 500;
+}
+
+#details-area .card p:nth-child(2) {
+  color: #004d40;
+  font-size: 2rem;
+}
+
+#details-area .card p:nth-child(3) {
+  color: #0b017a;
+  font-size: 2rem;
+}
+
+#details-area .card h3 {
+  color: #004d40;
+  padding-top: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#details-area .card div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+#details-area .card div.description {
+  color: #000;
+  padding: 1rem 2rem;
+}
+
+/* End vehicle details */
+
+/* Start about */
+#about-area {
+  padding: 1.25rem;
+  background: #ddd;
+  color: #000;
+}
+
+#about-area div {
+  max-width: 960px;
+  margin: auto;
+}
+
+#about-area h3 {
+  text-align: center;
+}
+
+#about-area img {
+  display: none;
+}
+
+#testimonials-area {
+  background: #004d40;
+  color: #fff;
+  padding: 1rem;
+}
+
+#testimonials-area h3 {
+  text-align: center;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.2rem;
+}
+
+#testimonials-area div {
+  display: flex;
+  flex-direction: column;
+}
+
+#testimonials-area div section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: auto;
+  background: #00796b;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#testimonials-area div section img {
+  display: block;
+  height: 6rem;
+  float: left;
+  margin: 1rem 1.25rem;
+  border-radius: 50%;
+}
+
+#testimonials-area div p {
+  text-align: left;
+}
+/* End about */
+
+/* Start contact */
+#contact-form {
+  padding: 1.88rem 0;
+  margin: 0 1rem;
+}
+
+#contact-form .form-control {
+  margin-bottom: 1rem;
+}
+
+#contact-form label {
+  display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px #ddd;
+}
+
+#contact-form textarea {
+  height: 12.5rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none !important;
+  border: solid 1px #ef6c00;
+}
+
+#contact-info {
+  background: #004d40;
+  color: #f4f4f4;
+}
+
+#contact-info .box {
+  border-bottom: dotted 1px #00796b;
+}
+
+#contact-info .box:last-child {
+  border-bottom: none;
+}
+/* End contact */
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.page-title {
+  color: #ef6c00;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #d5d3d3;
+  color: #000;
+}
+
+.bg-primary {
+  background: #00796b;
+  color: #ffb74d;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #000;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: #d5d3d3;
+  color: #333;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn:hover {
+  background: #e65100;
+  color: #333;
+}
+
+.box {
+  padding: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.box i {
+  margin-bottom: 1rem;
+}
+
+/* MEDIA QUERIES */
+/* min-width: 768px */
+@media (min-width: 768px) {
+  section p {
+    font-size: 1rem;
+  }
+
+  section i {
+    font-size: 1.3rem;
+  }
+
+  /* Start navigation */
+  nav ul {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li.menu-item {
+    display: block;
+    width: auto;
+  }
+
+  nav ul li.logo {
+    flex: 1;
+  }
+
+  nav ul li.toggle {
+    display: none;
+  }
+  /* End navigation */
+
+  /* Start gallery */
+  #vehicles-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* End gallery */
+
+  /* Start details page */
+  #details-area .card {
+    max-width: 960px;
+  }
+
+  #details-area .card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  #details-area .card div span:first-child {
+    display: block;
+    margin-right: 5rem;
+  }
+  /* End details page */
+
+  /* Start about */
+  #about-area div {
+    display: flex;
+  }
+
+  #about-area img {
+    display: block;
+    height: 250px;
+    border: solid 1px #333;
+    background: #fff;
+    padding: 2px;
+  }
+  /* End about */
+
+  /* Start contact */
+  #contact-form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #contact-info > div {
+    display: flex;
+    justify-content: space-around;
+  }
+  #contact-info .box {
+    border-bottom: none;
+  }
+  /* End contact */
+
+  #main-area {
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg)
+      no-repeat center center/cover;
+    height: 600px;
+    width: 100%;
+    padding: 2rem 4rem;
+    text-align: center;
+  }
+
+  #main-area > section {
+    background: #00796b;
+    color: #fff;
+    padding: 1rem;
+    opacity: 0.9;
+    border-radius: 5px;
+  }
+
+  #info-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #info-area .display-image {
+    display: block;
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1744287985/display-2_ppdnwj.jpg)
+      no-repeat center center/cover;
+  }
+
+  #info-area .info {
+    min-height: 400px;
+    padding-top: 3rem;
+  }
+
+  #feature-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #main-area {
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg)
+      no-repeat center center/cover;
+    height: 800px;
+    padding: 2rem 4rem;
+    text-align: center;
+  }
+
+  /* Start gallery */
+  #vehicles-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* End gallery */
+}

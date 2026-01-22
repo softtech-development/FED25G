@@ -1,0 +1,17 @@
+{
+  "name": "basic-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npx json-server vehicles.json",
+    "client": "live-server",
+    "dev": "npx json-server vehicles.json & live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2"
+  }
+}
