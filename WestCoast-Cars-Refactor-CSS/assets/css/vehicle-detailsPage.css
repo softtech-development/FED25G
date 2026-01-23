@@ -1,0 +1,66 @@
+/* Start vehicle details */
+#details-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+#details-area .card {
+  width: 70%;
+}
+
+#details-area .card p {
+  color: #000;
+  font-weight: 500;
+}
+
+#details-area .card p:nth-child(2) {
+  color: #004d40;
+  font-size: 2rem;
+}
+
+#details-area .card p:nth-child(3) {
+  color: #0b017a;
+  font-size: 2rem;
+}
+
+#details-area .card h3 {
+  color: #004d40;
+  padding-top: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#details-area .card div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+#details-area .card div.description {
+  color: #000;
+  padding: 1rem 2rem;
+}
+
+/* End vehicle details */
+@media (min-width: 768px) {
+  /* Start details page */
+  #details-area .card {
+    max-width: 960px;
+  }
+
+  #details-area .card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  #details-area .card div span:first-child {
+    display: block;
+    margin-right: 5rem;
+  }
+  /* End details page */
+}
