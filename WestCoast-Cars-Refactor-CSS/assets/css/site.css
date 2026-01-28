@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,200;1,400;1,500;1,600&display=swap');
 
+@import 'colors.css';
 @import 'navbar.css';
+@import 'utilities.css';
 
 /* Reset */
 * {
@@ -12,8 +14,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: #00796b;
-  color: #f4f4f4;
+  background: var(--primary-bg-color);
+  color: var(--text-color-light);
 }
 
 h1,
@@ -27,7 +29,7 @@ a {
 }
 
 span {
-  color: #000;
+  color: var(--text-color-dark);
 }
 
 section p {
@@ -38,14 +40,14 @@ section p {
 
 footer {
   text-align: center;
-  background: #444;
-  color: #fff;
+  background: var(--footer-color);
+  color: var(--text-color-light);
   padding: 0.4rem;
 }
 
 .goback {
   display: inline-block;
-  color: #f4f4f4;
+  color: var(--text-color-light);
   margin-bottom: 1.4rem;
 }
 
@@ -61,47 +63,11 @@ footer {
 }
 
 .page-title {
-  color: #ef6c00;
-}
-
-.bg-dark {
-  background: #333;
-  color: #fff;
-}
-
-.bg-light {
-  background-color: #d5d3d3;
-  color: #000;
-}
-
-.bg-primary {
-  background: #00796b;
-  color: #ffb74d;
-}
-
-.btn {
-  display: inline-block;
-  font-size: 0.9rem;
-  color: #fff;
-  background: #000;
-  padding: 0.5rem 1.25rem;
-  border: none;
-  outline: none !important;
-  cursor: pointer;
-}
-
-.btn-light {
-  background: #d5d3d3;
-  color: #333;
+  color: var(--secondary-color);
 }
 
 .full-width {
   width: 100%;
-}
-
-.btn:hover {
-  background: #e65100;
-  color: #333;
 }
 
 .box {
@@ -123,9 +89,5 @@ footer {
 
   section i {
     font-size: 1.3rem;
-  }
-
-  .btn {
-    font-size: 1rem;
   }
 }
