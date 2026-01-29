@@ -1,0 +1,97 @@
+/* Start index page */
+#main-area {
+  background: url('https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg')
+    no-repeat center/cover;
+  height: 600px;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+#main-area > section {
+  background: var(--primary-bg-color);
+  color: var(--text-color-light);
+  padding: 1rem;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+#main-area h1 {
+  font-size: 1.8rem;
+}
+
+#main-area p {
+  padding-bottom: 1.25rem;
+}
+
+#info-area .display-image {
+  display: none;
+}
+
+#info-area .info {
+  min-height: 300px;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+#info-area .info h3 {
+  font-size: 1.5rem;
+}
+
+#info-area .info p {
+  padding-bottom: 1rem;
+}
+
+#info-area .info a {
+  margin-bottom: 1rem;
+}
+/* End index page */
+
+@media (min-width: 768px) {
+  #main-area {
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg)
+      no-repeat center center/cover;
+    height: 600px;
+    width: 100%;
+    padding: 2rem 4rem;
+    text-align: center;
+  }
+
+  #main-area > section {
+    background: var(--primary-bg-color);
+    color: var(--text-color-light);
+    padding: 1rem;
+    opacity: 0.9;
+    border-radius: 5px;
+  }
+
+  #info-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #info-area .display-image {
+    display: block;
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1744287985/display-2_ppdnwj.jpg)
+      no-repeat center center/cover;
+  }
+
+  #info-area .info {
+    min-height: 400px;
+    padding-top: 3rem;
+  }
+
+  #feature-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  #main-area {
+    background: url(https://res.cloudinary.com/softtech-dev/image/upload/v1732696900/landing_mixwvd.jpg)
+      no-repeat center center/cover;
+    height: 800px;
+    padding: 2rem 4rem;
+    text-align: center;
+  }
+}

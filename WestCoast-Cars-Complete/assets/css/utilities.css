@@ -1,0 +1,66 @@
+.bg-dark {
+  background: #333;
+  color: var(--text-color-light);
+}
+
+.bg-light {
+  background-color: #d5d3d3;
+  color: var(--text-color-dark);
+}
+
+.bg-primary {
+  background: var(--primary-bg-color);
+  color: #ffb74d;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  background: var(--text-color-dark);
+  padding: 0.5rem 1.25rem;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: #d5d3d3;
+  color: #333;
+}
+
+.btn:hover {
+  background: #e65100;
+  color: #333;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px var(--secondary-color);
+  background: var(--text-color-light);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+  margin: 1rem 0;
+}
+
+.card img {
+  position: relative;
+  max-width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card img:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
